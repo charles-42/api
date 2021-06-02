@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 """
 {
@@ -18,7 +19,7 @@ def read_root():
     tfidf, model = pickle.load(open('model.bin', 'rb'))
     lol = pickle.load(open('lol', 'rb'))
     # print('model loaded!')
-    input = "i'm happy"
+    input = "i'm sad"
     predictions = model.predict(tfidf.transform([input]))
     label = predictions[0]
     return('{} : {}'.format(input, label))
