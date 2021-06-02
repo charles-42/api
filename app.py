@@ -3,6 +3,9 @@ import pickle
 
 '''
 heroku url : https://lit-spire-48980.herokuapp.com/
+python code to call api:
+response = requests.get("https://lit-spire-48980.herokuapp.com/{}".format(search_input))
+emotion = response.json()["label"]
 '''
 app = FastAPI()
 
@@ -13,3 +16,6 @@ def predict(input: str):
     predictions = model.predict(tfidf.transform([input]))
     label = predictions[0]
     return {'text': input, 'label': label}
+
+
+    
