@@ -66,22 +66,22 @@ La **documentation** d’une API REST devrait comporter au minimum les élément
 ### Giphy
 
 URI : https://api.giphy.com/v1/gifs/random?api_key={{MY SECRET KEY}}&tag={KEYWORD}&rating=g
-
+```js
 image url : response.json()["data"]["image_original_url"]
-
+```
 ### api.openweathermap
 
 URI : http://api.openweathermap.org/data/2.5/weather?q=Lille&appid={{MY SECRET KEY}}
-
+```js
 RESPONSE : {"coord":{"lon":3.0586,"lat":50.633},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":301.73,"feels_like":301.19,"temp_min":299.68,"temp_max":302.73,"pressure":1011,"humidity":38},"visibility":10000,"wind":{"speed":0.89,"deg":15,"gust":1.79},"clouds":{"all":0},"dt":1622639246,"sys":{"type":2,"id":2011132,"country":"FR","sunrise":1622605198,"sunset":1622663515},"timezone":7200,"id":2998324,"name":"Lille","cod":200}
-
+```
 
 ### TMDB FAVORITE MOVIE
 
 
 URI : https://api.themoviedb.org/3/movie/550?api_key={{MY SECRET KEY}}
 
-
+```js
 RESPONSE :    
 { "adult": false,
     "backdrop_path": "/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg",
@@ -101,3 +101,4 @@ RESPONSE :
     "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
     "popularity": 52.068,
     "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+```
