@@ -6,10 +6,20 @@ e.g. : https://lit-spire-48980.herokuapp.com/i love angry birds
 
 Try Detector at https://share.streamlit.io/hellovivien/emotions_detector/app.py
 
-code:
+code in streamlit:
 ```py
         response = requests.get("https://lit-spire-48980.herokuapp.com/{}".format(search_input))
         emotion = response.json()["label"]
+```
+
+code in this repo is deployed on heroku (ml is save in file model.bin):
+```py
+@app.get("/{input}")
+def predict(input: str):
+    tfidf, model = pickle.load(open('model.bin', 'rb'))
+    predictions = model.predict(tfidf.transform([input]))
+    label = predictions[0]
+    return {'text': input, 'label': label}
 ```
 
 # LES API ?
