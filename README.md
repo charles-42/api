@@ -2,7 +2,7 @@
 
 URI : https://lit-spire-48980.herokuapp.com/{{input}}
 
-e.g. : https://lit-spire-48980.herokuapp.com/i love angry birds
+e.g. : https://lit-spire-48980.herokuapp.com/i%20love%20angry%20birds
 
 Try Detector at https://share.streamlit.io/hellovivien/emotions_detector/app.py
 
