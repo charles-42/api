@@ -15,12 +15,12 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    # tfidf, model = pickle.load(open('model.bin', 'rb'))
+    tfidf, model = pickle.load(open('model.bin', 'rb'))
     lol = pickle.load(open('lol', 'rb'))
     # print('model loaded!')
     input = "i'm happy"
-    # predictions = model.predict(tfidf.transform([input]))
-    label = "happy"
+    predictions = model.predict(tfidf.transform([input]))
+    label = predictions[0]
     return('{} : {}'.format(input, label))
     # return {"Hello": "World"}
 
